@@ -1,0 +1,36 @@
+# TLDs with historically high abuse rates (spam, phishing, malware distribution).
+# One TLD per line, no leading dot. Lines starting with # are ignored.
+# NetWatch flags external connections to these TLDs as SUSPICIOUS (medium).
+zip
+mov
+xyz
+top
+club
+work
+click
+link
+gq
+cf
+ml
+ga
+tk
+rest
+surf
+bar
+loan
+win
+bid
+stream
+download
+racing
+review
+accountant
+science
+party
+faith
+trade
+webcam
+cricket
+men
+kim
+date

@@ -1,0 +1,87 @@
+# NetWatch trusted domains allowlist
+# One entry per line. Lines starting with # are ignored.
+# A leading dot matches subdomains only; a bare domain matches itself + subdomains.
+# Format: domain[:port]  (port optional; omit to match all ports)
+
+# --- Platform & OS vendors ---
+apple.com
+icloud.com
+mzstatic.com
+cdn-apple.com
+apple-dns.net
+microsoft.com
+windowsupdate.com
+windows.com
+msftncsi.com
+msftconnecttest.com
+live.com
+outlook.com
+office.com
+azure.com
+azureedge.net
+msedge.net
+google.com
+googleapis.com
+gstatic.com
+googlevideo.com
+gvt1.com
+gvt2.com
+gvt3.com
+youtube.com
+android.com
+chrome.com
+cloudflare.com
+cloudflare-dns.com
+cloudflareclient.com
+fastly.net
+akamai.net
+akamaiedge.net
+amazonaws.com
+cloudfront.net
+
+# --- Package managers & dev tooling ---
+registry.npmjs.org
+pypi.org
+files.pythonhosted.org
+rubygems.org
+crates.io
+proxy.golang.org
+repo.maven.apache.org
+docker.io
+registry-1.docker.io
+github.com
+githubusercontent.com
+objects.githubusercontent.com
+ghcr.io
+gitlab.com
+bitbucket.org
+homebrew.org
+formulae.brew.sh
+
+# --- Security & reputation services ---
+virustotal.com
+abuse.ch
+urlhaus.abuse.ch
+phishtank.com
+spamhaus.org
+
+# --- Common SaaS used by normal users ---
+slack.com
+zoom.us
+dropbox.com
+dropboxapi.com
+box.com
+notion.so
+atlassian.net
+figma.com
+sentry.io
+segment.io
+stripe.com
+paypal.com
+
+# --- Public DNS resolvers ---
+1.1.1.1:53
+8.8.8.8:53
+8.8.4.4:53
+9.9.9.9:53
+149.112.112.112:53

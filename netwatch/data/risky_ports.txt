@@ -1,0 +1,38 @@
+# Ports that are high-risk when reached across the internet.
+# Format: port|severity|protocol|description
+# severity: 1 = suspicious (low), 2 = suspicious (medium), 3 = malicious (high)
+# Lines starting with # are ignored.
+
+23|3|tcp|Telnet - cleartext remote shell, almost never legitimate on modern networks
+21|2|tcp|FTP control - cleartext credentials
+20|2|tcp|FTP data
+69|2|udp|TFTP - unauthenticated file transfer
+135|2|tcp|MS RPC endpoint mapper - classic Windows worm vector
+137|2|udp|NetBIOS name service
+138|2|udp|NetBIOS datagram
+139|2|tcp|NetBIOS session - lateral movement
+445|3|tcp|SMB - EternalBlue/WannaCry, ransomware lateral movement
+1433|2|tcp|MS SQL Server - frequently exposed by mistake
+1521|2|tcp|Oracle DB listener
+3306|2|tcp|MySQL - frequently exposed by mistake
+3389|2|tcp|RDP - brute-force and ransomware entry point
+4444|3|tcp|Metasploit default reverse shell
+4445|3|tcp|Metasploit alternate
+5555|2|tcp|Android ADB - remote device control
+5900|2|tcp|VNC - often unauthenticated
+5985|2|tcp|WinRM HTTP - remote PowerShell
+5986|2|tcp|WinRM HTTPS
+6379|3|tcp|Redis - unauthenticated by default, common cryptominer target
+6667|2|tcp|IRC - legacy botnet C2
+8080|1|tcp|Alternate HTTP - common proxy/C2 fallback
+8443|1|tcp|Alternate HTTPS - common proxy/C2 fallback
+9001|2|tcp|TOR OR port
+9030|2|tcp|TOR directory
+9050|3|tcp|TOR SOCKS proxy
+9051|2|tcp|TOR control port
+11211|3|tcp|Memcached - amplification DDoS and data theft
+27017|3|tcp|MongoDB - unauthenticated by default
+2375|3|tcp|Docker daemon (unencrypted) - full host takeover
+2376|2|tcp|Docker daemon (TLS)
+9200|2|tcp|Elasticsearch - frequently unauthenticated
+5601|2|tcp|Kibana

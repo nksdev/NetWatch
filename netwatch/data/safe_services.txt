@@ -1,0 +1,24 @@
+# Services that are expected to listen on all interfaces and are not
+# security problems. Suppresses EXPOSED_LISTENER / LAN_EXPOSURE noise for
+# well-known OS and LAN-discovery components.
+# Format: process_substring|port|note
+# port may be * to match any port; matching is case-insensitive substring
+# on the process name and requires BOTH process and port to match.
+# Lines starting with # are ignored.
+
+mDNSResponder|5353|Bonjour / multicast DNS responder
+Google Chrome Helper|5353|mDNS advertisement socket
+Brave Browser Helper|5353|mDNS advertisement socket
+ControlCenter|5000|AirPlay receiver advertisement
+ControlCenter|7000|AirPlay receiver stream
+rapportd|56509|Continuity / Handoff peer-to-peer service
+rapportd|*|Continuity / Handoff peer-to-peer service
+sharingd|*|AirDrop / Handoff sharing daemon
+replicatord|*|Continuity replication service
+identityservicesd|*|Apple ID / iMessage identity service
+ARDAgent|3283|Apple Remote Desktop agent
+ARDAgent|5900|Apple Remote Desktop screen sharing
+ARDAgent|*|Apple Remote Desktop agent
+vncserver|5900|VNC screen sharing
+sshd|22|Secure Shell server
+cupsd|631|Print spooler

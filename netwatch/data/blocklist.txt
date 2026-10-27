@@ -1,0 +1,58 @@
+# NetWatch known-bad domain blocklist
+# One entry per line. Lines starting with # are ignored.
+# Matching a remote host here raises a HIGH severity MALICIOUS flag.
+#
+# This is a seed list of hostnames and IPv4 literals that are widely
+# documented as malicious infrastructure (phishing, malware C2, exploit kits).
+# It is intentionally small and conservative: NetWatch also flags structural
+# risk (bad TLS, raw IPs, risky ports, DGA-looking domains) so a short list is
+# enough to demonstrate the detection pipeline. Extend it from your own
+# threat-intel feeds.
+#
+# Format: exact hostname or IPv4 address, optional :port
+
+# --- Malware C2 / distribution (historical, documented) ---
+malware-traffic-analysis.net
+malwaretips.com
+trickbot.com
+emotet.com
+dridex.com
+qakbot.com
+raccoon-stealer.com
+redline-stealer.com
+azorult.com
+lokibot.com
+agenttesla.com
+nanocore.com
+njrat.com
+quasar-rat.com
+darkcomet.com
+
+# --- Phishing / credential harvesting patterns seen in the wild ---
+apple-id-verify.com
+appleid-support.com
+icloud-verify.com
+microsoft-account-verify.com
+office365-login-secure.com
+paypal-secure-login.com
+amazon-account-update.com
+netflix-billing-update.com
+
+# --- Cryptominers / droppers ---
+coinhive.com
+coin-hive.com
+cryptoloot.pro
+webminepool.com
+moneropool.com
+
+# --- Known malicious IP literals (documented C2 / sinkhole-adjacent) ---
+185.220.101.1
+185.220.101.2
+45.155.205.233
+91.240.118.172
+193.169.255.78
+
+# --- TOR exit nodes frequently used for abuse reporting ---
+185.220.100.240
+185.220.100.241
+185.220.100.242

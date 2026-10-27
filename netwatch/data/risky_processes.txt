@@ -1,0 +1,24 @@
+# Process names that warrant extra scrutiny when they hold an external socket.
+# Format: process_substring|severity|reason
+# Matching is case-insensitive substring on the process name.
+# severity: 1 = low, 2 = medium, 3 = high
+# Lines starting with # are ignored.
+
+nc|2|netcat - raw socket tool, often used for reverse shells
+telnet|2|cleartext remote shell
+ncat|2|nmap netcat - raw socket tool
+socat|2|socket relay - frequently used for tunnelling
+meterpreter|3|Metasploit payload
+msfconsole|3|Metasploit framework
+cobaltstrike|3|Cobalt Strike beacon
+beacon|2|possible C2 beacon
+mimikatz|3|credential dumping tool
+lazagne|3|credential dumping tool
+xmrig|3|Monero cryptominer
+minerd|3|cryptominer
+cpuminer|3|cryptominer
+ethminer|3|cryptominer
+nbminer|3|cryptominer
+phpshell|3|web shell
+c99shell|3|web shell
+r57shell|3|web shell
